@@ -1,0 +1,38 @@
+{% extends 'THESTARSHIP/layout.html'%}
+
+
+{% block body %}
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav">
+        <a href="#" class="nav_logo">THEREXSTARSHIP</a>
+
+        <ul class="nav_items">
+          <li class="nav_item">
+            <a href="#" class="nav_link">Home</a>
+            <a href="#" class="nav_link">Product</a>
+            <a href="#" class="nav_link">Services</a>
+            <a href="#" class="nav_link">Contact</a>
+            {% if user.is_authenticated %}
+            <a href="{% url 'signout' %}"><button class="button" id="form-open">Logout</button></a>
+            {% else %}
+            <a href="{% url 'signin' %}"><button class="button" id="form-open">Login</button></a>
+            {%endif%}
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Home -->
+    <section class="home">
+      <div class="centered-container">
+        <div class='msg'>
+          {% if user.is_authenticated %}
+            <h1 class='nav_logo'>WELCOME ONBOARD, {{ user.first_name }}</h1>
+          {% else %}
+            <h1 class='nav_logo'>LOGIN TO COME ONBOARD</h1>
+          {% endif %}
+        </div>
+      </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'acc/layout.html'%}
+
+
+{% block body %}
+  <div class="container">
+    <div class="title">SignUp</div>
+    <div class="content">
+      <form action="signup" method="post">
+      {% csrf_token %}
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">First Name</span>
+            <input type="text" placeholder="Enter your name"  name='first name' required>
+          </div>
+          <div class="input-box">
+            <span class="details">Second Name</span>
+            <input type="text" placeholder="Enter your name"  name='second name' required>
+          </div>
+          <div class="input-box">
+            <span class="details">Username</span>
+            <input type="text" placeholder="Enter your username"  name='username' required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="email" placeholder="Enter your email" name='email'required>
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="password" placeholder="Enter your password" name='password1' required>
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="password" placeholder="Confirm your password" name='password2' required>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="singup">
+        </div>
+        Got an account? <a  href="{% url 'signin' %}" id="signup">Login</a>
+      </form>
+      {% for message in messages %}
+      <h3 class='details'>{{message}}</h3>
+      {%endfor%}
+    </div>
+  </div>
+
+{%endblock%}
