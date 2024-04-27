@@ -1,16 +1,6 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8">
-    <title> REX USER AUTH</title>
-    <link rel="stylesheet" href="{% static 'acc/styles.css'%}">
+{% extends 'layout.html'%}
 
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-    <body>
+{% block body %}
     <div class="container">
       <h2 class='title'>Sign In</h2>
       <div class="content"> 
@@ -40,7 +30,5 @@
         {%endfor%}
       </div>
     </div>
-    <script src="{% static 'acc/script.js' %}"></script>
 
-    </body>
-  </head>
+  {%endblock%}
