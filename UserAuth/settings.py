@@ -57,8 +57,8 @@ ROOT_URLCONF = 'UserAuth.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['Templates'],
-        'APP_DIRS': True,
+        'DIRS': ['/AUTH/UserAuth/THESTARSHIP/Templates/THESTARSHIP','/AUTH/UserAuth/acc/Templates/acc'],
+        'APP_DIRS': False,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
