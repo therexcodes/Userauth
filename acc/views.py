@@ -30,7 +30,7 @@ def signup(request):
             
             
         
-    return render(request, 'acc/signup.html')
+    return render(request, 'signup.html')
 
 
 def login(request):
@@ -50,7 +50,7 @@ def login(request):
             return redirect('signin')
         
     else:
-        return render(request, 'acc/signin.html')
+        return render(request, 'signin.html')
     
     
 def logout(request):
