@@ -57,7 +57,7 @@ ROOT_URLCONF = 'UserAuth.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/AUTH/UserAuth/THESTARSHIP/Templates/THESTARSHIP','/AUTH/UserAuth/acc/Templates/acc'],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': False,
         'OPTIONS': {
             'context_processors': [
@@ -124,6 +124,9 @@ import os
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
 MEDIA_URLS ='/media/'
 
 
