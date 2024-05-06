@@ -12,7 +12,6 @@
             <a href="#" class="nav_link">Home</a>
             <a href="#" class="nav_link">Product</a>
             <a href="#" class="nav_link">Services</a>
-            <a href="#" class="nav_link">Contact</a>
             {% if user.is_authenticated %}
             <a href="{% url 'signout' %}"><button class="button" id="form-open">Logout</button></a>
             {% else %}
