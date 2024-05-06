@@ -88,7 +88,7 @@ a {
 }
 
 /* Media Query for Mobile Devices */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 600px) {
   .header {
     height: auto;
     padding: 15px 20px;
